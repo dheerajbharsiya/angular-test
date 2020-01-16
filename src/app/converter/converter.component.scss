@@ -1,0 +1,30 @@
+.converter-box {
+    background: grey;
+    width: 30%;
+    padding: 10px;
+    .input-box {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        input {
+            padding: 4px;
+        }
+    }
+
+    .digit-container {
+        background: gray;
+        display: inline-block;
+        div {
+            float: left;
+            .button-digit {
+                padding: 40px;
+                display: inline-block;
+                float: left;
+                margin: 15px;
+                background-color: lightgrey;
+
+            }
+                
+        }
+    }
+}
