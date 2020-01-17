@@ -1,11 +1,13 @@
 <div class="converter-box">
     <div class="input-box">
-            <input type="text" readonly name="inputNum" placeholder="Integers" [value]="integers">
-            <input type="text" readonly name="inputChar" placeholder="Text" [value]="texts">
+        <input type="text" readonly name="inputNum" placeholder="Integers" [value]="integers">
+        <input type="text" readonly name="inputChar" placeholder="Text" [value]="texts">
     </div>
     <div class="digit-container">
-        <div *ngFor="let digit of digits">
-            <button class="button-digit" (click)="setClickValue(digit)">{{digit}}</button>
+        <div class="row">
+            <div class="col-4" *ngFor="let digit of digits">
+                <button class="button-digit" (click)="setClickValue(digit)">{{digit}}</button>
+            </div>
         </div>
     </div>
 </div>

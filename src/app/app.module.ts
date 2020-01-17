@@ -5,9 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConverterComponent } from './converter/converter.component';
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 import { reducers, metaReducers } from './reducers';
 import { converterReducer } from './converter/converter.reducer';
 import { ConverterService } from './converter/converter.service';
+import { ConverterEffect } from './converter/converter.effect';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { ConverterService } from './converter/converter.service';
     AppRoutingModule,
     StoreModule.forRoot({
       converterData : converterReducer
-    })
+    }),
+    EffectsModule.forRoot([ConverterEffect])
   ],
   providers: [ConverterService],
   bootstrap: [AppComponent]

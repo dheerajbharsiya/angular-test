@@ -26,6 +26,7 @@ export class ConverterComponent implements OnInit {
 
   setClickValue(digit: string) {
     console.log(`You have entered ${digit}`);
+    this.store.dispatch({type:'CONVERT_INT_TO_TEXT', payload: digit});
     if(digit == '<--') {
       this.integers = this.integers.substring(0, this.integers.length-1);
       this.texts = this.converterService.getConvertedString(this.integers);
